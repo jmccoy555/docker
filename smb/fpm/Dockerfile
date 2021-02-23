@@ -1,4 +1,4 @@
-FROM nextcloud:20-fpm
+FROM nextcloud:21-fpm
 RUN apt update && apt install smbclient -y \
   && rm -rf /var/lib/apt/lists/* \
   && sed -i '/^\[global\]/a\   client min protocol = SMB2' /etc/samba/smb.conf \
